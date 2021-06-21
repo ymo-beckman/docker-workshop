@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://workshop-db:3306/workshop
+    username: root
+    password: 1q2w3e4r
+  redis:
+    host: workshop-cache
+    port: 6379
+    pool:
+      max-active: 8
+      min-idle: 0
+      max-idle: 8
+      max-wait: -1
+    password: 1q2w3e4r

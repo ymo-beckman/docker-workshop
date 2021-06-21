@@ -1,0 +1,16 @@
+services:
+  workshop-db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1q2w3e4r
+      MYSQL_DATABASE: workshop
+    ports:
+    - 53306:3306
+  workshop-cache:
+    image: redis:alpine
+    restart: always
+    container_name: redis-server
+    command: redis-server --requirepass 1q2w3e4r
+    ports:
+    - 56379:6379
